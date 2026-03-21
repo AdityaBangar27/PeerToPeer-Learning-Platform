@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 222 47% 11%;
+  --accent: 263 70% 60%;
+  --accent-foreground: 210 40% 98%;
+  --background: 210 40% 98%;
+  --foreground: 222 47% 3%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 3%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --border: 214 32% 91%;
+}
+
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 213 31% 91%;
+  --card: 222 47% 11%;
+  --card-foreground: 213 31% 91%;
+  --muted: 223 47% 11%;
+  --muted-foreground: 215 20% 65%;
+  --border: 216 34% 17%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-premium {
+  @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold transition-all duration-300 transform rounded-full shadow-lg hover:scale-105 active:scale-95 bg-accent text-accent-foreground hover:shadow-accent/40;
+}
+
+.card-premium {
+  @apply p-6 border rounded-2xl bg-card border-border shadow-sm hover:shadow-xl hover:border-accent/40 transition-all duration-300;
+}

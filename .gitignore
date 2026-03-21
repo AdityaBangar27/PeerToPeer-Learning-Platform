@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+database.sqlite
+*.log
+.next/
+out/
+build/
+dist/
+.DS_Store
